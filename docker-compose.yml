@@ -1,37 +1,30 @@
 version: '3.8'
 
 services:
+
+  inventory-data-service:
+    build:
+      context: .
+      dockerfile: InventoryDataService/Dockerfile
+    ports:
+      - "5002:80"
+
+  inventory-service:
+    build:
+      context: .
+      dockerfile: InventoryService/Dockerfile
+      args:
+        - NUGET_CACHE=/root/.nuget
+    volumes:
+      - ./InventoryService/appsettings.json:/app/appsettings.json:ro
+
   api-gateway:
-    build: ./ApiGateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
     ports:
       - "5001:80"
     depends_on:
       - inventory-service
-      - inventory-data-service
-
-  inventory-service:
-    build: ./InventoryService
-    ports:
-      - "5000:80"
-    environment:
-      - DataService__BaseUrl=http://inventory-data-service
-
-  inventory-data-service:
-    build: ./InventoryDataService
-    environment:
-      - ConnectionStrings__DefaultConnection=Server=db;Database=InventoryDb;User=sa;Password=YourStrong@Passw0rd;
-    depends_on:
-      - db
-
-  db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      - SA_PASSWORD=YourStrong@Passw0rd
-      - ACCEPT_EULA=Y
-    ports:
-      - "1433:1433"
     volumes:
-      - inventory-data:/var/opt/mssql
-
-volumes:
-  inventory-data:
+      - ./ApiGateway/ocelot.json:/app/ocelot.json:ro
