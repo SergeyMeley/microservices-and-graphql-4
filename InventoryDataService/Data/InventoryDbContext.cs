@@ -1,7 +1,7 @@
-﻿using InventoryService.Models;
+﻿using InventoryDataService.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace InventoryService.Data
+namespace InventoryDataService.Data
 {
     public class InventoryDbContext : DbContext
     {

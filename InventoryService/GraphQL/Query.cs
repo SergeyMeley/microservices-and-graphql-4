@@ -1,8 +1,8 @@
 ﻿using HotChocolate;
 using HotChocolate.Data;
 using Microsoft.EntityFrameworkCore;
-using InventoryService.Data;
-using InventoryService.Models;
+using InventoryDataService.Data;
+using InventoryDataService.Models;
 
 //public class Query
 //{

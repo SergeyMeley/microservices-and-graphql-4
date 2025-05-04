@@ -1,15 +1,32 @@
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/api/warehouses/{id}/products",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 5000
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/gateway/warehouses/{id}/products",
+//      "UpstreamHttpMethod": [ "GET" ]
+//    }
+//  ]
+//}
+
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/warehouses/{id}/products",
+      "DownstreamPathTemplate": "/api/products/by-warehouse/{warehouseId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "inventory-data-service",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/gateway/warehouses/{id}/products",
+      "UpstreamPathTemplate": "/gateway/warehouses/{warehouseId}/products",
       "UpstreamHttpMethod": [ "GET" ]
     }
   ]

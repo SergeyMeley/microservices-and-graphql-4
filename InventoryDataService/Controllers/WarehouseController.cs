@@ -1,8 +1,9 @@
-﻿using InventoryService.Data;
-using InventoryService.Models;
+﻿using InventoryDataService.Data;
+using InventoryDataService.Data;
+using InventoryDataService.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InventoryService.Controllers
+namespace InventoryDataService.Controllers
 {
     [ApiController]
     [Route("api/warehouses")]

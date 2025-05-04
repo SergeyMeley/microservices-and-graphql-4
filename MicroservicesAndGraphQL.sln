@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModels", "SharedModels\SharedModels.csproj", "{2F72D8BA-ABC3-4E6A-8CDE-79E624EE28B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryDataService", "InventoryDataService\InventoryDataService.csproj", "{1FA8B04C-8E5A-4ADE-B84B-C111392502B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryDataService", "InventoryDataService\InventoryDataService.csproj", "{1FA8B04C-8E5A-4ADE-B84B-C111392502B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{605A2F1F-C060-445E-9994-BEA658705DD0}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
