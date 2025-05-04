@@ -6,6 +6,8 @@ WORKDIR /src
 COPY InventoryService/InventoryService.csproj ./InventoryService/
 RUN dotnet restore ./InventoryService/InventoryService.csproj \
     --runtime linux-x64
+COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+
 
 # Stage 2: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
@@ -17,6 +19,7 @@ COPY --from=restore /root/.nuget /root/.nuget
 
 # Copy source code
 COPY InventoryService ./InventoryService/
+COPY ["Infrastructure/", "Infrastructure/"]
 
 # Publish
 WORKDIR /src/InventoryService

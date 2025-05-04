@@ -1,5 +1,5 @@
-﻿using InventoryDataService.Data;
-using InventoryDataService.Models;
+﻿using Infrastructure.Data;
+using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]

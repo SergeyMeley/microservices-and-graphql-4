@@ -1,4 +1,4 @@
-using InventoryDataService.Data;
+using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 

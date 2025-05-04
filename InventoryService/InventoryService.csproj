@@ -19,15 +19,15 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\InventoryDataService\InventoryDataService.csproj" />
-  </ItemGroup>
-
 	<ItemGroup>
 		<Content Remove="appsettings.json" />
 		<Content Remove="appsettings.*.json" />
 		<None Include="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="appsettings.*.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>

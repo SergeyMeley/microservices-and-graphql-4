@@ -1,6 +1,6 @@
-﻿using InventoryDataService.Data;
-using InventoryDataService.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Infrastructure;
+using Infrastructure.Data;
 
 namespace InventoryDataService.Controllers
 {

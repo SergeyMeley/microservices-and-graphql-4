@@ -1,4 +1,4 @@
-﻿namespace InventoryDataService.Models
+﻿namespace Infrastructure
 {
     public class Warehouse
     {

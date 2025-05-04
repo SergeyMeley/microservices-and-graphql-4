@@ -1,8 +1,8 @@
 ﻿using HotChocolate;
 using HotChocolate.Data;
 using Microsoft.EntityFrameworkCore;
-using InventoryDataService.Data;
-using InventoryDataService.Models;
+using Infrastructure.Data;
+using Infrastructure;
 
 //public class Query
 //{
@@ -33,4 +33,10 @@ public class Query
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadFromJsonAsync<List<Product>>();
     }
+    //public async Task<List<Product>> GetProductsByWarehouse(int warehouseId)
+    //{
+    //    var response = await _httpClient.GetFromJsonAsync<List<Product>>(
+    //        $"http://inventory-data-service/api/warehouses/{warehouseId}/products");
+    //    return response ?? new();
+    //}
 }
